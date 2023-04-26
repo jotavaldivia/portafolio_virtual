@@ -1,11 +1,12 @@
 import style from "./Greeting.module.css";
-import speaking from "../../assets/images/speaking.gif";
-
+interface Props {
+  url: string;
+}
 // }
-const Greeting = () => {
+const Greeting = ({ url }: Props) => {
   return (
     <div className={style.saludo}>
-      <img width={1200} src={speaking} alt="" />
+      <img width={1200} src={url} alt="" />
     </div>
   );
 };

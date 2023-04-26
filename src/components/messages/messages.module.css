@@ -35,7 +35,7 @@
     transform: translateY(0);
   }
 }
-
+/* 
 .texto {
   text-indent: 100%;
   width: 0;
@@ -55,5 +55,34 @@
   }
   100% {
     text-indent: 0;
+  }
+} */
+.texto {
+  overflow: hidden; /* Oculta el texto */
+  border-right: 0.15em solid orange; /* Crea un borde para el efecto de máquina de escribir */
+  white-space: nowrap; /* Evita que el texto se rompa en múltiples líneas */
+  margin: 0 auto; /* Centra el texto horizontalmente */
+  letter-spacing: 0.15em; /* Aumenta el espacio entre letras para una apariencia más auténtica */
+  animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+/* La animación de escribir */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* La animación del cursor */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
   }
 }
