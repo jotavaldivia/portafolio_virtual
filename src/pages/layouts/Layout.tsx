@@ -1,6 +1,12 @@
-import { Children } from "../../global";
-const Layaout = ({ children }: Children) => {
-  return <>{children}</>;
+import { Navbar } from "../../components";
+import { Outlet } from "react-router-dom";
+const Layout = () => {
+  return (
+    <div>
+      <Navbar />
+      <Outlet />
+    </div>
+  );
 };
 
-export default Layaout;
+export default Layout;

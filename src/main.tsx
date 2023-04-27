@@ -1,7 +1,24 @@
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
+import { Layout } from "./pages/layouts";
+import { Home, Error404 } from "./pages";
 import "./index.css";
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+    ],
+  },
+  {
+    path: "*",
+    element: <Error404 />,
+  },
+]);
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <App />
+  <RouterProvider router={router} />
 );

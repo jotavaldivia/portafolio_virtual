@@ -1,6 +1,6 @@
 import Logo from "../logo/Logo";
 import style from "./navbar.module.css";
-Logo;
+
 const Navbar = () => {
   return (
     <>
