@@ -1,3 +1,12 @@
+.container__messages {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .message__bubble {
   max-width: 1000px;
   background-color: #fff;
@@ -6,21 +15,19 @@
   display: inline-block;
   padding: 10px 20px;
   position: relative;
-  top: 250px;
   margin: 10px;
   animation: swing 3s ease-in-out infinite;
 }
 
 .message__bubble:before {
-  border-style: solid;
-  border-width: 15px 15px 15px 0;
-  border-color: transparent #fff transparent transparent;
   content: "";
-  display: block;
-  height: 0;
   position: absolute;
-  left: -15px;
-  top: 10px;
+  bottom: -20px;
+  left: 50px;
+  border-width: 20px 0 0 20px;
+  border-style: solid;
+  border-color: #ffffff transparent;
+  display: block;
   width: 0;
 }
 
@@ -35,54 +42,28 @@
     transform: translateY(0);
   }
 }
-/* 
-.texto {
-  text-indent: 100%;
-  width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-  0% {
-    text-indent: 50%;
-  }
-  100% {
-    text-indent: 0;
-  }
-} */
-.texto {
-  overflow: hidden; /* Oculta el texto */
-  border-right: 0.15em solid orange; /* Crea un borde para el efecto de máquina de escribir */
-  white-space: nowrap; /* Evita que el texto se rompa en múltiples líneas */
-  margin: 0 auto; /* Centra el texto horizontalmente */
-  letter-spacing: 0.15em; /* Aumenta el espacio entre letras para una apariencia más auténtica */
-  animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+
+.typewriter {
+  font-size: 2rem;
 }
 
-/* La animación de escribir */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+.button__muted {
+  font-size: 0.8rem;
+  width: 100px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: rgb(0, 255, 229);
+  border: #fff;
 }
 
-/* La animación del cursor */
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
+@media (max-width: 800px) {
+  .container__messages {
+    justify-content: flex-start;
+    margin-top: 2rem;
   }
-  50% {
-    border-color: orange;
+
+  .typewriter {
+    font-size: 1.2rem;
+    text-align: center;
   }
 }

@@ -1,10 +1,4 @@
-.saludo {
-  position: relative;
-  top: 250px;
-}
-
 .saludo img {
-  position: absolute;
   top: 0;
   left: 0;
   animation: mover 3s ease-in-out infinite;
@@ -19,5 +13,11 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 800px) {
+  .saludo img {
+    max-width: 200px;
   }
 }

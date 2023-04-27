@@ -1,0 +1,43 @@
+.navbar {
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li {
+  padding: 10px;
+  list-style: none;
+}
+
+.menu li a {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 800px) {
+  .container__logo {
+    display: flex;
+    justify-content: center;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+
+  .menu {
+    padding: 0%;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu li a {
+    font-size: 1rem;
+  }
+}
