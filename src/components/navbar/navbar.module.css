@@ -10,12 +10,12 @@
   align-items: center;
 }
 
-.menu li {
+.menu a {
   padding: 10px;
   list-style: none;
 }
 
-.menu li a {
+.menu a {
   font-size: 1.5rem;
   color: white;
   text-decoration: none;
@@ -37,7 +37,7 @@
     align-items: center;
   }
 
-  .menu li a {
+  .menu a {
     font-size: 1rem;
   }
 }

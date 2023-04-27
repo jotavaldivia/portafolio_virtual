@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom/client";
 import { Layout } from "./pages/layouts";
-import { Home, Error404 } from "./pages";
+import { Home, Error404, About } from "./pages";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
@@ -11,6 +11,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/sobremi",
+        element: <About />,
       },
     ],
   },
