@@ -5,8 +5,6 @@ import speaking from '../../assets/images/speaking.gif';
 import staticimg from '../../assets/images/static.png';
 import useTypewriter from '../../hooks/useTypewriter';
 
-const TYPOGRAPHY = ['1rem', '2rem', '3rem'] as const;
-
 interface Props {
   text: string;
   delay: number;
