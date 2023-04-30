@@ -11,7 +11,8 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v2.4.4
+
 
     - name: Install dependencies
       run: npm install  # Replace with your build command if necessary
