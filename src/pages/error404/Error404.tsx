@@ -1,6 +1,6 @@
-import Error from "../../assets/images/error404.gif";
-import ErrorMobile from "../../assets/images/error404mobile.gif";
-import style from "./error404.module.css";
+import Error from '../../assets/images/error404.gif';
+import ErrorMobile from '../../assets/images/error404mobile.gif';
+import style from './error404.module.css';
 const Error404 = () => {
   const imageUrl = window.innerWidth >= 768 ? Error : ErrorMobile;
 

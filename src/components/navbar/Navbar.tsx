@@ -1,6 +1,6 @@
-import Logo from "../logo/Logo";
-import style from "./navbar.module.css";
-import { Link } from "react-router-dom";
+import Logo from '../logo/Logo';
+import style from './navbar.module.css';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <>
@@ -11,8 +11,8 @@ const Navbar = () => {
 
         <ul className={style.menu}>
           <Link to="/">Inicio</Link>
-          <Link to="/sobremi">Sobre Mi</Link>
-          <Link to="/">CV</Link>
+          <Link to="/sobremi">Sobre</Link>
+          <Link to="/experiencia">Experiencia</Link>
           <Link to="/">Servicios</Link>
           <Link to="/">Contacto</Link>
         </ul>

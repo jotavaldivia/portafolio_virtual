@@ -20,7 +20,7 @@
 }
 
 .message__bubble:before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -20px;
   left: 50px;
@@ -63,7 +63,7 @@
   }
 
   .typewriter {
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
   }
 }

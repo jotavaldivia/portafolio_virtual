@@ -1,11 +1,11 @@
-import style from "./messages.module.css";
-import { Greeting } from "../../components";
+import style from './messages.module.css';
+import { Greeting } from '../../components';
 
-import speaking from "../../assets/images/speaking.gif";
-import staticimg from "../../assets/images/static.png";
-import useTypewriter from "../../hooks/useTypewriter";
+import speaking from '../../assets/images/speaking.gif';
+import staticimg from '../../assets/images/static.png';
+import useTypewriter from '../../hooks/useTypewriter';
 
-const TYPOGRAPHY = ["1rem", "2rem", "3rem"] as const;
+const TYPOGRAPHY = ['1rem', '2rem', '3rem'] as const;
 
 interface Props {
   text: string;
@@ -32,7 +32,7 @@ const Messages = (prop: Props) => {
         <Greeting width={300} url={staticimg} />
       )}
       <button onClick={() => toggleMute()} className={style.button__muted}>
-        {isMuted ? "🔊" : "🔇"}
+        {isMuted ? '🔊' : '🔇'}
       </button>
     </div>
   );

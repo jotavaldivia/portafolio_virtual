@@ -1,28 +1,32 @@
-import ReactDOM from "react-dom/client";
-import { Layout } from "./pages/layouts";
-import { Home, Error404, About } from "./pages";
-import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ReactDOM from 'react-dom/client';
+import { Layout } from './pages/layouts';
+import { Home, Error404, About, Experiencia } from './pages';
+import './index.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Layout />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <Home />,
       },
       {
-        path: "/sobremi",
+        path: '/sobremi',
         element: <About />,
+      },
+      {
+        path: '/experiencia',
+        element: <Experiencia />,
       },
     ],
   },
   {
-    path: "*",
+    path: '*',
     element: <Error404 />,
   },
 ]);
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <RouterProvider router={router} />
 );
