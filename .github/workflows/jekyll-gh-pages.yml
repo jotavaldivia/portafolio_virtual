@@ -3,19 +3,24 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # Replace with your repository's main branch name
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Install dependencies
-        run: yarn install
-      - name: Build
-        run: yarn build
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.4
-        with:
-          branch: gh-pages # La rama de destino en la que se implementará tu aplicación
-          folder: dist # La carpeta que contiene el código compilado
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: npm install  # Replace with your build command if necessary
+
+    - name: Build site
+      run: npm run build  # Replace with your build command
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build  # Replace with the directory containing your built site
