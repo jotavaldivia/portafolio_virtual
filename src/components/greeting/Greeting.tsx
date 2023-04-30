@@ -1,4 +1,4 @@
-import style from './Greeting.module.css';
+import style from './greeting.module.css';
 interface Props {
   url: string;
   width: number;
