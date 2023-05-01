@@ -31,13 +31,13 @@
   }
 
   .menu {
-    padding: 1rem;
     /* flex-direction: column; */
+    padding: 0%;
     justify-content: center;
     align-items: center;
   }
 
   .menu a {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
