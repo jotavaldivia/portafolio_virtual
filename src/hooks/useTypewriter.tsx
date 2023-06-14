@@ -9,14 +9,18 @@ const useTypewriter = (text: string, delay: number): UseTypewriterReturn => {
   const { toggleMute, isMuted } = useReadtext(text);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setTypedText(text.slice(0, currentIndex + 1));
-      setCurrentIndex(currentIndex + 1);
-      if (currentIndex === text.length) {
-        setLoading(false);
-      }
-    }, delay);
-    return () => clearTimeout(timer) as void;
+    if (currentIndex < text.length) {
+      const timer = setTimeout(() => {
+        setTypedText(text.slice(0, currentIndex + 1));
+        setCurrentIndex(currentIndex + 1);
+      }, delay);
+
+      return () => {
+        clearTimeout(timer) as void;
+      };
+    }
+    console.log(delay);
+    setLoading(false);
   }, [currentIndex, delay, text]);
 
   return [typedText, loading, toggleMute, isMuted];
