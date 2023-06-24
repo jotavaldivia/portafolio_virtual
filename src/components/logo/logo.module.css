@@ -1,9 +1,10 @@
+.text {
+  color: white;
+  margin: 1rem;
+}
 @media (max-width: 800px) {
   .logo {
     display: flex;
-    justify-content: center;
-  }
-  .logo img {
-    width: 20%;
+    justify-content: space-around;
   }
 }

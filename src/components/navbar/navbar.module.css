@@ -2,6 +2,7 @@
   background-color: black;
   display: flex;
   justify-content: space-around;
+  height: 3rem;
 }
 
 .menu {
@@ -28,6 +29,7 @@
   }
   .navbar {
     flex-direction: column;
+    height: 7rem;
   }
 
   .menu {
