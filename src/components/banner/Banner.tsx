@@ -1,4 +1,3 @@
-import banner1 from '../../assets/images/banner1.jpg';
 import style from './Banner.module.css';
 const Banner = () => {
   return (

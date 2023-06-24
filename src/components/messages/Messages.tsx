@@ -18,7 +18,10 @@ const Messages = (prop: Props) => {
   const [typedText, loading, toggleMute, isMuted] = useTypewriter(text, delay);
 
   return (
-    <div className={style.container__messages} style={stylesContainer}>
+    <div
+      className={`${style.container__messages} fade-in`}
+      style={stylesContainer}
+    >
       <div className={`${style.message__bubble}`}>
         <p className={style.typewriter} style={stylesParrafo}>
           {typedText}

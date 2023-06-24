@@ -354,3 +354,16 @@ body {
   /* background-color: rgb(12, 203, 140); */
   background-color: #161b22;
 }
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 1.5s forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
